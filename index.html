@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookOut</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-background">
+        <h1>
+            <img src="bookout-logo.png" class="logo">
+            BookOut!
+        </h1>
+        <h2>Search for available books</h2>
+    </div>
+
+    <!-- dropdown menu -->
+    <div class="accessibility-dropdown">
+        <div class="dropdown-content">
+            <a href="#" id="font-adjust">Adjust Font Size</a>
+            <a href="#" id="voice-over">Voice Over</a>
+        </div>
+        Accessibility Features
+    </div>
+
+    <!-- font slider -->
+    <div class="slider-container" id="font-slider-container" style="display: none;">
+        <input type="range" id="font-size-slider" min="10" max="30" value="16" class="slider" oninput="adjustFontSize()">
+        <p id="font-size-label" style="color: #1a237e; font-weight: bold;">Adjust Font Size</p>
+    </div>
+
+    <!-- search bar -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Check a book's availability..." aria-label="Book Title">
+        <button id="search-btn" onclick="searchBook()">Search</button>
+    </div>
+
+    <!-- book status -->
+    <div id="book-info" class="book-info" style="display: none;">
+        <h2 id="book-title"></h2>
+        <p id="book-author"></p>
+        <div id="book-status" class="status"></div>
+        <p id="book-availability"></p>
+    </div>
+
+    <!-- reference script -->
+    <script src="script.js"></script>
+</body>
+</html>
